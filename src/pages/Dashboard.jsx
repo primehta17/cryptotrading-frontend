@@ -23,16 +23,27 @@ function Dashboard() {
   };
 
   // Fetch updated user balance
+  // const fetchUser = async () => {
+  //   try {
+  //     const res = await axios.get(`${REACT_APP_API_URL}/api/auth/me`, {
+  //       headers: { Authorization: `Bearer ${authToken}` },
+  //     });
+  //     setBalance(res.data.balance);
+  //   } catch (err) {
+  //     console.error("Fetch user error:", err);
+  //   }
+  // };
   const fetchUser = async () => {
-    try {
-      const res = await axios.get(`${REACT_APP_API_URL}/api/auth/me`, {
-        headers: { Authorization: `Bearer ${authToken}` },
-      });
-      setBalance(res.data.balance);
-    } catch (err) {
-      console.error("Fetch user error:", err);
-    }
-  };
+  try {
+    const res = await axios.get(`${REACT_APP_API_URL}/api/auth/me`, {
+      headers: { Authorization: `Bearer ${authToken}` },
+    });
+    setBalance((prevBalance) => res.data.balance);
+  } catch (err) {
+    console.error("Fetch user error:", err);
+  }
+};
+
 
   useEffect(() => {
     fetchHistory();

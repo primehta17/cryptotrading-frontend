@@ -1,6 +1,7 @@
 Real-time crypto trading dashboard built with the MERN stack.
 Includes secure JWT authentication, Binance live price streaming, and user trade management.
 
+
 ⚙️ Features
 
 🔐 User signup/login with JWT
@@ -65,6 +66,12 @@ Env vars:
 
 REACT_APP_API_URL=https://your-backend.onrender.com/api
 REACT_APP_WS_URL=wss://your-backend.onrender.com
+
+
+FRONTEND Link : https://cryptotrading-frontend.onrender.com
+BACKEND Link : https://cryptotrading-backend.onrender.com
+GITHUB Link For Frontend : https://github.com/primehta17/cryptotrading-frontend.git
+GITHUB Link For Frontend : https://github.com/primehta17/cryptotrading-backend.git
 
 🔐 Test Credentials
 Email: testuser@gmail.com
