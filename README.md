@@ -1,82 +1,109 @@
-Real-time crypto trading dashboard built with the MERN stack.
-Includes secure JWT authentication, Binance live price streaming, and user trade management.
+Real-Time Cryptocurrency Trading Dashboard
 
+This application is a comprehensive cryptocurrency trading dashboard developed using the MERN stack, designed to provide real-time market data and secure user interactions. It integrates live price streaming from Binance, user authentication with JWT, and robust trade management features.
 
 ⚙️ Features
 
-🔐 User signup/login with JWT
+User Authentication: Secure signup and login functionality utilizing JSON Web Tokens (JWT) for session management.
 
-💹 Live BTC/USDT trade updates via Binance WebSocket
+Real-Time Market Data: Live streaming of BTC/USDT trading pairs via Binance WebSocket API, ensuring up-to-date market information.
 
-📈 Trade creation & history tracking
+Trade Management: Capabilities for users to create, view, and manage their trade history, facilitating effective portfolio tracking.
 
-🧰 MongoDB Atlas for data storage
+Data Storage: Utilization of MongoDB Atlas for scalable and reliable data storage solutions.
 
-🚀 Setup
+🚀 Setup Instructions
 Backend
+
+Navigate to the backend directory:
+
 cd backend
+
+
+Install dependencies:
+
 npm install
 
 
-.env
+Configure environment variables by creating a .env file with the following content:
 
 PORT=5000
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret
 
 
-Start:
+Start the backend server:
 
 npm start
 
 Frontend
+
+Navigate to the frontend directory:
+
 cd frontend
+
+
+Install dependencies:
+
 npm install
 
 
-.env
+Configure environment variables by creating a .env file with the following content:
 
-REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_API_URL=http://localhost:5000
 REACT_APP_WS_URL=ws://localhost:5000
 
 
-Start:
+Start the frontend development server:
 
 npm start
 
-☁️ Deployment (Render)
+☁️ Deployment on Render
+Backend Deployment
 
-Backend:
+Set the root directory to /backend.
 
-Root: /backend
+Install dependencies:
 
-Build: npm install
+npm install
 
-Start: npm start
 
-Frontend:
+Start the backend server:
 
-Root: /frontend
+npm start
 
-Build: npm run build
+Frontend Deployment
 
-Publish: build
+Set the root directory to /frontend.
 
-Env vars:
+Build the frontend application:
+
+npm run build
+
+
+Publish the build directory.
+
+Configure environment variables:
 
 REACT_APP_API_URL=https://your-backend.onrender.com/api
 REACT_APP_WS_URL=wss://your-backend.onrender.com
 
+🔗 Live Demo and Repository Links
 
-TEST LINKS:
-FRONTEND Link : https://cryptotrading-frontend.onrender.com
-BACKEND Link : https://cryptotrading-backend.onrender.com
-GITHUB Link For Frontend : https://github.com/primehta17/cryptotrading-frontend.git
-GITHUB Link For Frontend : https://github.com/primehta17/cryptotrading-backend.git
+Frontend Demo: https://cryptotrading-frontend.onrender.com
+
+Backend Demo: https://cryptotrading-backend.onrender.com
+
+Frontend GitHub Repository: https://github.com/primehta17/cryptotrading-frontend.git
+
+Backend GitHub Repository: https://github.com/primehta17/cryptotrading-backend.git
+
+Project Demonstration Video: https://drive.google.com/file/d/1zXV6lh0MZ5W4LBU_vVvYTLMJom2nTPTW/view?usp=sharing(View on Google Drive)
 
 🔐 Test Credentials
+
 Email: testuser@gmail.com
 Password: test1234
 
-
-License: MIT License
+📄 License
+This project is licensed under the MIT License.
