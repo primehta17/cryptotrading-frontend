@@ -1,0 +1,138 @@
+.dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #222;
+  &_logout {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+
+    &:hover {
+      background-color: #c0392b;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111827;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 0;
+
+      span {
+        color: #4ade80;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+
+      span {
+        font-weight: bold;
+        color: #38bdf8;
+      }
+    }
+  }
+
+  &_prices {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &_trade {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &_history {
+    background: #f9fafb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: #111827;
+    }
+  }
+
+  &_empty {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+  }
+
+  &_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &_item {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #f3f4f6;
+      transform: scale(1.01);
+    }
+
+    &--buy {
+      border-left: 5px solid #22c55e;
+    }
+
+    &--sell {
+      border-left: 5px solid #ef4444;
+    }
+
+    .dashboard_symbol {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .dashboard_type {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .dashboard_details {
+      font-family: monospace;
+      color: #111827;
+    }
+
+    .dashboard_time {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  }
+}
