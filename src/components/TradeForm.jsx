@@ -8,6 +8,7 @@ function TradeForm({ type }) {
   const [quantity, setQuantity] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const REACT_APP_API_URL=process.env.REACT_APP_API_URL;
   const { authToken } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
@@ -28,7 +29,7 @@ function TradeForm({ type }) {
       const price = parseFloat(ticker.price);
 
       const res = await axios.post(
-        `http://localhost:5000/api/trade/${type.toLowerCase()}`,
+        `${REACT_APP_API_URL}/api/trade/${type.toLowerCase()}`,
         { symbol, quantity, price },
         {
           headers: {

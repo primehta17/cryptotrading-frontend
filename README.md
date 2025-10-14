@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+Real-time crypto trading dashboard built with the MERN stack.
+Includes secure JWT authentication, Binance live price streaming, and user trade management.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+⚙️ Features
 
-## Available Scripts
+🔐 User signup/login with JWT
 
-In the project directory, you can run:
+💹 Live BTC/USDT trade updates via Binance WebSocket
 
-### `npm start`
+📈 Trade creation & history tracking
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🧰 MongoDB Atlas for data storage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🚀 Setup
+Backend
+cd backend
+npm install
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+.env
 
-### `npm run build`
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm start
 
-### `npm run eject`
+Frontend
+cd frontend
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+.env
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_WS_URL=ws://localhost:5000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Start:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+☁️ Deployment (Render)
 
-### Code Splitting
+Backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Root: /backend
 
-### Analyzing the Bundle Size
+Build: npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start: npm start
 
-### Making a Progressive Web App
+Frontend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Root: /frontend
 
-### Advanced Configuration
+Build: npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Publish: build
 
-### Deployment
+Env vars:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+REACT_APP_API_URL=https://your-backend.onrender.com/api
+REACT_APP_WS_URL=wss://your-backend.onrender.com
 
-### `npm run build` fails to minify
+🔐 Test Credentials
+Email: testuser@gmail.com
+Password: test1234
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+License: MIT License

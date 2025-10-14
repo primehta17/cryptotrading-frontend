@@ -9,11 +9,11 @@ function Dashboard() {
   const { user, authToken, logout } = useContext(AuthContext);
   const [history, setHistory] = useState([]);
   const [balance, setBalance] = useState(user?.balance || 0);
-
+  const REACT_APP_API_URL=process.env.REACT_APP_API_URL;
   // Fetch trade history
   const fetchHistory = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/trade/history", {
+      const res = await axios.get(`${REACT_APP_API_URL}/api/trade/history`, {
         headers: { Authorization: `Bearer ${authToken}` },
       });
       setHistory(res.data);
@@ -25,7 +25,7 @@ function Dashboard() {
   // Fetch updated user balance
   const fetchUser = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/me", {
+      const res = await axios.get(`${REACT_APP_API_URL}/api/auth/me`, {
         headers: { Authorization: `Bearer ${authToken}` },
       });
       setBalance(res.data.balance);
